@@ -8,7 +8,6 @@ Gtk/DecorationLayout "menu:close"
 Xft/Antialias 1
 Net/CursorBlinkTime 1200
 Gtk/IMModule "gtk-im-context-simple"
-Gtk/ShellShowsDesktop 0
 Xft/Hinting 1
 Xft/HintStyle "hintslight"
 Gtk/MenuImages 0
@@ -28,7 +27,6 @@ Net/CursorBlink 1
 Gtk/IMPreeditStyle "callback"
 Gtk/EnableAnimations 1
 Xft/DPI 98304
-Gtk/CursorThemeName "whiteglass"
 Gtk/ToolbarIconSize "large"
 Gtk/IMStatusStyle "callback"
 Gtk/RecentFilesMaxAge -1
@@ -38,7 +36,6 @@ Net/FallbackIconTheme "gnome"
 Gtk/ColorPalette "black:white:gray50:red:purple:blue:light blue:green:yellow:orange:lavender:brown:goldenrod4:dodger blue:pink:light green:gray10:gray30:gray75:gray90"
 Gtk/OverlayScrolling 1
 Net/EnableEventSounds 1
-Net/IconThemeName "candy-icons"
 Gtk/ShowUnicodeMenu 0
 Gtk/SessionBusId "090bfcfa2ddec0183a64714b6297b6ed"
 Gtk/CursorBlinkTimeout 10
