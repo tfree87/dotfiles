@@ -31,7 +31,8 @@
 
 ;; Emacs 
 
-"emacs"
+"emacs-pgtk-native-comp"
+"emacs-benchmark-init"
 "emacs-guix"
 "emacs-org-roam"
 "emacs-pdf-tools"

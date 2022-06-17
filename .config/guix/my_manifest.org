@@ -3,7 +3,7 @@
 #+title:GUIX SD Manifest
 #+subtitle:
 #+author: Thomas Freeman
-#+date: Time-stamp: <2022-06-16 15:47:39 thomas>
+#+date: Time-stamp: <2022-06-17 08:42:36 thomas>
 #+description: This Org file contains manifest for my GUIX system
 #+language: en
 #+property: header-args :results silent :exports code
@@ -65,7 +65,8 @@
 #+end_src
 ** Emacs 
 #+begin_src scheme :comments org
-  "emacs"
+  "emacs-pgtk-native-comp"
+  "emacs-benchmark-init"
   "emacs-guix"
   "emacs-org-roam"
   "emacs-pdf-tools"
