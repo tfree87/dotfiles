@@ -1,6 +1,3 @@
-;; This is an operating system configuration generated
-;; by the graphical installer.
-
 (use-modules (gnu) (nongnu packages linux))			 
 (use-service-modules
   cups
@@ -36,7 +33,7 @@
                 %base-user-accounts))
   (packages
     (append
-      (list (specification->package "emacs")
+      (list (specification->package "emacs-pgtk-native-comp")
             (specification->package "emacs-exwm")
             (specification->package
               "emacs-desktop-environment")
