@@ -3,6 +3,7 @@
 (use-service-modules
  cups
  desktop
+ docker
  networking
  ssh
  xorg)
