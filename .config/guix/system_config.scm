@@ -42,7 +42,8 @@
    %base-packages))
  (services
   (append
-   (list (service gnome-desktop-service-type)
+   (list (service docker-service-type)
+         (service gnome-desktop-service-type)
          (service gnome-keyring-service-type)
          (service cups-service-type)
          (set-xorg-configuration
