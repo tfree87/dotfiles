@@ -23,7 +23,7 @@
                 (home-directory "/home/thomas")
                 (shell (file-append fish "/bin/fish"))
                 (supplementary-groups
-                 '("wheel" "netdev" "audio" "video" "cdrom")))
+                 '("wheel" "netdev" "audio" "video" "cdrom" "docker")))
                (user-account
                 (name "monique")
                 (comment "Monique Freeman")

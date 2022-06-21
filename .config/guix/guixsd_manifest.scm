@@ -113,6 +113,7 @@
 "calibre"
 "handbrake"
 "mplayer"
+"mpv"
 "obs"
 "openshot"
 "picard"
@@ -154,6 +155,7 @@
 "gparted"
 "gpick"
 "htop"
+"lshw"
 "openssh"
 "rclone"
 "transmission"
@@ -167,7 +169,8 @@
 
 ;; Web Browsing
 
-"ungoogled-chromium"
 "icecat"
+"nyxt"
+"ungoogled-chromium"
 
 ))
