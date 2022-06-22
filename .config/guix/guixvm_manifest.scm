@@ -16,28 +16,21 @@
 "go"
 "python"
 
-;; Docker
-
-"containerd"
-"docker"
-"docker-cli"
-
 ;; Email
 
 "gnupg"
 "icedove"
 "isync"
+"mu"
 "pinentry"
 
 ;; Emacs 
 
-"emacs-pgtk-native-comp"
 "emacs-benchmark-init"
 "emacs-guix"
 "emacs-org-roam"
 "emacs-pdf-tools"
 "emacs-vterm"
-"mu"
 
 ;; EXWM
 
@@ -84,10 +77,6 @@
 "font-linuxlibertine"
 "font-mononoki"
 "font-montserrat"
-
-;; Fun
-
-"stellarium"
 
 ;; Gnome
 
@@ -146,12 +135,10 @@
 ;; System Tools/Utilities
 
 "baobab"
-"clamav"
 "curl"
 "dbxfs"
 "filezilla"
 "fish"
-"flatpak"
 "gparted"
 "gpick"
 "htop"
@@ -161,7 +148,6 @@
 "transmission"
 "trash-cli"
 "unzip"
-"zsh"
 
 ;; Web Browsing
 

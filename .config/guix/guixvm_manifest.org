@@ -1,13 +1,13 @@
 # -*-eval: (add-hook 'after-save-hook (lambda ()(org-babel-tangle)) nil t);-*-
 
-#+title:GUIX SD Manifest
+#+title:GUIX VM Manifest
 #+subtitle:
 #+author: Thomas Freeman
-#+date: Time-stamp: <2022-06-21 19:58:50 thomas>
+#+date: Time-stamp: <2022-06-21 20:38:36 thomas>
 #+description: This Org file contains manifest for my GUIX system
 #+language: en
 #+property: header-args :results silent :exports code
-#+property: header-args :tangle "./guixsd_manifest.scm"
+#+property: header-args :tangle "./guixvm_manifest.scm"
 #+options: tex:t
 
 #+options: html-link-use-abs-url:nil html-postamble:auto
@@ -50,28 +50,21 @@
   "go"
   "python"
 #+end_src
-** Docker
-#+begin_src scheme :comments org
-  "containerd"
-  "docker"
-  "docker-cli"
-#+end_src
 ** Email
 #+begin_src scheme :comments org
   "gnupg"
   "icedove"
   "isync"
+  "mu"
   "pinentry"
 #+end_src
 ** Emacs 
 #+begin_src scheme :comments org
-  "emacs-pgtk-native-comp"
   "emacs-benchmark-init"
   "emacs-guix"
   "emacs-org-roam"
   "emacs-pdf-tools"
   "emacs-vterm"
-  "mu"
 #+end_src
 ** EXWM
 #+begin_src scheme :comments org
@@ -118,10 +111,6 @@
   "font-linuxlibertine"
   "font-mononoki"
   "font-montserrat"
-#+end_src
-** Fun
-#+begin_src scheme :comments org
-  "stellarium"
 #+end_src
 ** Gnome
 #+begin_src scheme :comments org
@@ -180,12 +169,10 @@
 ** System Tools/Utilities
 #+begin_src scheme :comments org
   "baobab"
-  "clamav"
   "curl"
   "dbxfs"
   "filezilla"
   "fish"
-  "flatpak"
   "gparted"
   "gpick"
   "htop"
@@ -195,7 +182,6 @@
   "transmission"
   "trash-cli"
   "unzip"
-  "zsh"
 #+end_src
 ** Web Browsing
 #+begin_src scheme :comments org
