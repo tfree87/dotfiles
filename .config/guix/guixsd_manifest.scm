@@ -165,8 +165,13 @@
 
 ;; Web Browsing
 
-"icecat"
+"firefox"
 "nyxt"
 "ungoogled-chromium"
+
+;; WINE
+
+"wine"
+"winetricks"
 
 ))

@@ -3,7 +3,7 @@
 #+title:GUIX SD Manifest
 #+subtitle:
 #+author: Thomas Freeman
-#+date: Time-stamp: <2022-06-21 19:58:50 thomas>
+#+date: Time-stamp: <2022-06-24 19:14:00 thomas>
 #+description: This Org file contains manifest for my GUIX system
 #+language: en
 #+property: header-args :results silent :exports code
@@ -199,9 +199,14 @@
 #+end_src
 ** Web Browsing
 #+begin_src scheme :comments org
-  "icecat"
+  "firefox"
   "nyxt"
   "ungoogled-chromium"
+#+end_src
+** WINE
+#+begin_src scheme :comments org
+  "wine"
+  "winetricks"
 #+end_src
 *  End File
 #+begin_src scheme 
