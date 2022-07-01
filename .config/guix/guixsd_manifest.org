@@ -3,7 +3,7 @@
 #+title:GUIX SD Manifest
 #+subtitle:
 #+author: Thomas Freeman
-#+date: Time-stamp: <2022-06-24 19:14:00 thomas>
+#+date: Time-stamp: <2022-07-01 18:41:29 thomas>
 #+description: This Org file contains manifest for my GUIX system
 #+language: en
 #+property: header-args :results silent :exports code
@@ -49,6 +49,7 @@
   "git"
   "go"
   "python"
+  "python-black"
 #+end_src
 ** Docker
 #+begin_src scheme :comments org

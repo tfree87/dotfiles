@@ -15,6 +15,7 @@
 "git"
 "go"
 "python"
+"python-black"
 
 ;; Docker
 
