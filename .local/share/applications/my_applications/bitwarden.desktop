@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Bitwarden
+Exec=flatpak run com.bitwarden.desktop
+Type=Application
+Categories=Flatpak;
+Comment=Desktop interface to the Bitwarden password manager
+Icon=/var/lib/flatpak/app/com.bitwarden.desktop/current/active/files/share/app-info/icons/flatpak/128x128/com.bitwarden.desktop.png

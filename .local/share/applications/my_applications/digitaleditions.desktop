@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Adobe Digital Editions
+Exec=export WINEPREFIX=/home/thomas/.wine32 ; wine "C:\Program Files\Adobe\Adobe Digital Editions 4.5\DigitalEditions.exe" 
+Type=Application
+Categories=Wine;
+Comment=Library manager for DRM contolled ebooks
+Terminal=false
+Version=4.5
