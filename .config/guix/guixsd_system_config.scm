@@ -22,16 +22,24 @@
                 (group "users")
                 (home-directory "/home/thomas")
                 (shell (file-append fish "/bin/fish"))
-                (supplementary-groups
-                 '("wheel" "netdev" "audio" "video" "cdrom" "docker")))
+                (supplementary-groups '("audio"
+                                        "cdrom"
+                                        "docker"
+                                        "lp"
+                                        "netdev"
+                                        "video"
+                                        "wheel")))
                (user-account
                 (name "monique")
                 (comment "Monique Freeman")
                 (group "users")
                 (home-directory "/home/monique")
                 (shell (file-append fish "/bin/fish"))
-                (supplementary-groups
-                 '("netdev" "audio" "video" "cdrom")))
+                (supplementary-groups '("audio"
+                                        "cdrom"
+                                        "lp"
+                                        "netdev"
+                                        "video")))
                %base-user-accounts))
  (packages
   (append
