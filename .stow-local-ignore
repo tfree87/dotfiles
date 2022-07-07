@@ -24,3 +24,4 @@ _darcs
 ## Add to the default ignored files
 
 \.org # Ignore Org Mode files
+\.sh # Ignore scripts for setting up system
