@@ -1,0 +1,22 @@
+
+* Install Adobe Digital Editions Using WINE
+
+#+begin_src sh :shebang !/bin/sh :tangle yes :tangle "ade-setup.sh"
+  # Install Adobe Digital Editions using WINE
+
+  export WINEPREFIX="~/.wine32"
+
+  WINEARCH=win32
+  winecfg
+  winetricks -q adobe_diged4
+#+end_src
+
+* Install GNOME Extensions
+
+#+begin_src sh :shebang !/bin/sh :tangle yes :tangle "install-gnome-extensions.sh"
+  # Install extensions for GNOME
+
+  
+#+end_src
+
+* 
