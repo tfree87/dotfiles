@@ -1,0 +1,17 @@
+#+title: Dotfiles
+#+date: <2022-07-07 Thu>
+#+author: Thomas Freeman
+#+email: thomas@guixsd
+#+language: en_US
+#+select_tags: export
+#+exclude_tags: noexport
+#+creator: Emacs 28.1.50 (Org mode 9.5.4)
+
+#+options: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+options: author:t broken-links:nil c:nil creator:nil num:nil
+#+options: d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t
+#+options: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
+#+options: timestamp:t title:t toc:t todo:t |:t
+
+This repository contains my "dotfiles" for my GNU Guix System Distribution system. This repository is meant to contain all the files and configuration that I need to make a reproducible system and contain all of the information that I have learned in setting up my GUIX system.
+
