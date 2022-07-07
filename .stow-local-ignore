@@ -1,4 +1,4 @@
-# Default GNU Stow ignored files are below
+## Default GNU Stow ignored files are below
 
 RCS
 .+,v
@@ -21,6 +21,6 @@ _darcs
 ^/LICENSE.*
 ^/COPYING
 
-# Ignore Org Mode files
+## Add to the default ignored files
 
-\.org
+\.org # Ignore Org Mode files
