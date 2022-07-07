@@ -10,9 +10,9 @@
 ;; Software Development
 
 "geany"
+"git"
 "glade"
 "gnome-builder"
-"git"
 "go"
 "python"
 "python-black"
@@ -32,11 +32,15 @@
 
 ;; Emacs 
 
-"emacs-pgtk-native-comp"
+"emacs-all-the-icons"
+"emacs-all-the-icons-completion"
+"emacs-all-the-icons-dired"
+"emacs-all-the-icons-ibuffer"
 "emacs-benchmark-init"
 "emacs-guix"
 "emacs-org-roam"
 "emacs-pdf-tools"
+"emacs-pgtk-native-comp"
 "emacs-vterm"
 "mu"
 
@@ -129,6 +133,7 @@
 "libreoffice"
 "pandoc"
 "pdfarranger"
+"plantuml"
 "scribus"
 "texlive"
 "xournalpp"

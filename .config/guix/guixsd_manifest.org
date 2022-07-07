@@ -3,7 +3,7 @@
 #+title:GUIX SD Manifest
 #+subtitle:
 #+author: Thomas Freeman
-#+date: Time-stamp: <2022-07-01 18:41:29 thomas>
+#+date: Time-stamp: <2022-07-07 15:18:06 thomas>
 #+description: This Org file contains manifest for my GUIX system
 #+language: en
 #+property: header-args :results silent :exports code
@@ -44,9 +44,9 @@
 ** Software Development
 #+begin_src scheme :comments org
   "geany"
+  "git"
   "glade"
   "gnome-builder"
-  "git"
   "go"
   "python"
   "python-black"
@@ -66,11 +66,15 @@
 #+end_src
 ** Emacs 
 #+begin_src scheme :comments org
-  "emacs-pgtk-native-comp"
+  "emacs-all-the-icons"
+  "emacs-all-the-icons-completion"
+  "emacs-all-the-icons-dired"
+  "emacs-all-the-icons-ibuffer"
   "emacs-benchmark-init"
   "emacs-guix"
   "emacs-org-roam"
   "emacs-pdf-tools"
+  "emacs-pgtk-native-comp"
   "emacs-vterm"
   "mu"
 #+end_src
@@ -163,6 +167,7 @@
   "libreoffice"
   "pandoc"
   "pdfarranger"
+  "plantuml"
   "scribus"
   "texlive"
   "xournalpp"
