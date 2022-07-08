@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Zotero
+Exec=flatpak run org.zotero.Zotero
+Type=Application
+Categories=Flatpak;
+Comment=Citation and document library manager
+Icon=/var/lib/flatpak/app/org.zotero.Zotero/current/active/files/share/app-info/icons/flatpak/128x128/org.zotero.Zotero.png

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Raspberry Pi Imager
+Exec=flatpak run org.raspberrypi.rpi-imager
+Type=Application
+Categories=Flatpak;
+Comment=Create bootable USB flash drives for Raspberry Pi
+Icon=/var/lib/flatpak/app/org.raspberrypi.rpi-imager/current/active/files/share/app-info/icons/flatpak/128x128/org.raspberrypi.rpi-imager.png
