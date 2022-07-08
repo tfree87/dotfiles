@@ -1,4 +1,5 @@
 (use-modules (gnu)
+             (gnu services mcron)
              (nongnu packages linux))
 
 (use-service-modules cups
@@ -16,15 +17,15 @@
 ;; mcron job definitions
 
 (define garbage-collector-job
-  ;; Collect garbage 5 minutes after midnight every day.
+  ;; Collect garbage at noon every Saturday.
   ;; Ensure that 10GB is available on disk (-F 10G)
   ;; Remove any generations older than 6 months (-d 6m)
-  #~(job "5 0 * * *"            ;Vixie cron syntax
+  #~(job "0 12 * * 6"
          "guix gc -d 6m -F 10G"))
 
 (define updatedb-job
-  ;; Run 'updatedb' at 3AM every day.
-  #~(job '(next-hour '(3))
+  ;; Run 'updatedb' 15 minutes past the hour every 3 hours
+  #~(job "15 0/3 * * *"
          (lambda ()
            (execl (string-append #$findutils "/bin/updatedb")
                   "updatedb"
@@ -66,20 +67,103 @@
                %base-user-accounts))
  (packages
   (append
-   (list (specification->package "emacs-pgtk-native-comp")
-         (specification->package "emacs-exwm")
-         (specification->package
-          "emacs-desktop-environment")
-         (specification->package "nss-certs"))
+   (map specification->package
+        '("emacs-pgtk-native-comp"
+          "emacs-exwm"
+          "emacs-desktop-environment"
+          "nss-certs"
+          "font-adobe-source-code-pro"
+          "font-adobe-source-han-sans"
+          "font-adobe-source-sans-pro"
+          "font-adobe-source-serif-pro"
+          "font-adobe100dpi"
+          "font-adobe75dpi"
+          "font-anonymous-pro"
+          "font-anonymous-pro-minus"
+          "font-awesome"
+          "font-bitstream-vera"
+          "font-blackfoundry-inria"
+          "font-cantarell"
+          "font-cns11643"
+          "font-cns11643-swjz"
+          "font-comic-neue"
+          "font-cronyx-cyrillic"
+          "font-culmus"
+          "font-dec-misc"
+          "font-dejavu"
+          "font-dosis"
+          "font-dseg"
+          "font-fantasque-sans"
+          "font-fira-code"
+          "font-fira-mono"
+          "font-fira-sans"
+          "font-fontna-yasashisa-antique"
+          "font-gnu-freefont"
+          "font-gnu-freefont-ttf"
+          "font-gnu-unifont"
+          "font-go"
+          "font-google-material-design-icons"
+          "font-google-noto"
+          "font-google-roboto"
+          "font-hack"
+          "font-hermit"
+          "font-ibm-plex"
+          "font-inconsolata"
+          "font-iosevka"
+          "font-iosevka-aile"
+          "font-iosevka-etoile"
+          "font-iosevka-slab"
+          "font-iosevka-sparkle"
+          "font-iosevka-term"
+          "font-iosevka-term-slab"
+          "font-ipa-mj-mincho"
+          "font-isas-misc"
+          "font-jetbrains-mono"
+          "font-lato"
+          "font-liberation"
+          "font-linuxlibertine"
+          "font-lohit"
+          "font-meera-inimai"
+          "font-micro-misc"
+          "font-misc-cyrillic"
+          "font-misc-ethiopic"
+          "font-misc-misc"
+          "font-mononoki"
+          "font-mplus-testflight"
+          "font-mutt-misc"
+          "font-open-dyslexic"
+          "font-opendyslexic"
+          "font-public-sans"
+          "font-rachana"
+          "font-sarasa-gothic"
+          "font-schumacher-misc"
+          "font-screen-cyrillic"
+          "font-sil-andika"
+          "font-sil-charis"
+          "font-sil-gentium"
+          "font-sony-misc"
+          "font-sun-misc"
+          "font-tamzen"
+          "font-terminus"
+          "font-tex-gyre"
+          "font-ubuntu"
+          "font-un"
+          "font-util"
+          "font-vazir"
+          "font-winitzki-cyrillic"
+          "font-wqy-microhei"
+          "font-wqy-zenhei"
+          "font-xfree86-type1"
+          ))
    %base-packages))
  (services
   (append
-   (list (cons
-          (simple-service 'my-cron-jobs
-                          mcron-service-type
-                          (list garbage-collector-job
-                                updatedb-job))
-          %base-services)
+   (list (service
+          mcron-service-type
+          (mcron-configuration
+           (jobs
+            (list garbage-collector-job
+                  updatedb-job))))
          (service docker-service-type)
          (service gnome-desktop-service-type)
          (service gnome-keyring-service-type)
