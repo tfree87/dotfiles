@@ -1,13 +1,36 @@
-(use-modules (gnu) (nongnu packages linux))
+(use-modules (gnu)
+             (nongnu packages linux))
 
-(use-service-modules
- cups
- desktop
- docker
- networking
- ssh
- xorg)
-(use-package-modules bash shells)
+(use-service-modules cups
+                     desktop
+                     docker
+                     mcron
+                     networking
+                     ssh
+                     xorg)
+
+(use-package-modules base
+                     bash
+                     shells)
+
+;; mcron job definitions
+
+(define garbage-collector-job
+  ;; Collect garbage 5 minutes after midnight every day.
+  ;; Ensure that 10GB is available on disk (-F 10G)
+  ;; Remove any generations older than 6 months (-d 6m)
+  #~(job "5 0 * * *"            ;Vixie cron syntax
+         "guix gc -d 6m -F 10G"))
+
+(define updatedb-job
+  ;; Run 'updatedb' at 3AM every day.
+  #~(job '(next-hour '(3))
+         (lambda ()
+           (execl (string-append #$findutils "/bin/updatedb")
+                  "updatedb"
+                  "--prunepaths=/tmp /var/tmp /gnu/store"))))
+
+;; Declare operating system
 
 (operating-system
  (kernel linux)
@@ -51,7 +74,13 @@
    %base-packages))
  (services
   (append
-   (list (service docker-service-type)
+   (list (cons
+          (simple-service 'my-cron-jobs
+                          mcron-service-type
+                          (list garbage-collector-job
+                                updatedb-job))
+          %base-services)
+         (service docker-service-type)
          (service gnome-desktop-service-type)
          (service gnome-keyring-service-type)
          (service cups-service-type)
