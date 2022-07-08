@@ -38,6 +38,7 @@
 "emacs-all-the-icons-ibuffer"
 "emacs-benchmark-init"
 "emacs-guix"
+"emacs-multi-vterm"
 "emacs-org-roam"
 "emacs-pdf-tools"
 "emacs-pgtk-native-comp"
