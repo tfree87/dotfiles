@@ -1,8 +1,10 @@
 
 * Install Adobe Digital Editions Using WINE
 
+The following script, when run after WINE and winetricks are installed on the host system, will install Adobe Digital Editions.
+
 #+begin_src sh :shebang !/bin/sh :tangle yes :tangle "ade-setup.sh"
-  # Install Adobe Digital Editions using WINE
+  # Install Adobe Digital Editions using WINE and winetricks
 
   export WINEPREFIX="~/.wine32"
 
@@ -18,5 +20,3 @@
 
   
 #+end_src
-
-* 
