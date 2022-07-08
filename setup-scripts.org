@@ -13,10 +13,18 @@ The following script, when run after WINE and winetricks are installed on the ho
   winetricks -q adobe_diged4
 #+end_src
 
-* Install GNOME Extensions
+* Install Flatpaks
 
-#+begin_src sh :shebang !/bin/sh :tangle yes :tangle "install-gnome-extensions.sh"
-  # Install extensions for GNOME
+#+begin_src sh :shebang !/bin/sh :tangle yes :tangle
+  # Install Flatpaks
 
-  
+  sudo flatpak install \
+       com.bitwarden.desktop \
+       com.makemkv.MakeMKV \
+       com.microsoft.Teams \
+       com.sweethome3d.Sweethome3d \
+       org.kde.digikam \
+       org.raspberrypi.rpi-imager \
+       org.zotero.Zotero \
+       us.zoom.Zoom 
 #+end_src
