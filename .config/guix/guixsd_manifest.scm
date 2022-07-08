@@ -167,7 +167,6 @@
 "transmission"
 "trash-cli"
 "unzip"
-"zsh"
 
 ;; Web Browsing
 

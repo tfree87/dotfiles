@@ -3,7 +3,7 @@
 #+title:GUIX SD Manifest
 #+subtitle:
 #+author: Thomas Freeman
-#+date: Time-stamp: <2022-07-07 15:18:06 thomas>
+#+date: Time-stamp: <2022-07-08 10:31:27 thomas>
 #+description: This Org file contains manifest for my GUIX system
 #+language: en
 #+property: header-args :results silent :exports code
@@ -201,7 +201,6 @@
   "transmission"
   "trash-cli"
   "unzip"
-  "zsh"
 #+end_src
 ** Web Browsing
 #+begin_src scheme :comments org
