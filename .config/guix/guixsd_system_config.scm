@@ -25,11 +25,8 @@
 
 (define updatedb-job
   ;; Run 'updatedb' 15 minutes past the hour every 3 hours
-  #~(job "15 0/3 * * *"
-         (lambda ()
-           (execl (string-append #$findutils "/bin/updatedb")
-                  "updatedb"
-                  "--prunepaths=/tmp /var/tmp /gnu/store"))))
+  #~(job "15 */3 * * *"
+         "updatedb --prunepaths=/tmp /var/tmp /gnu/store"))
 
 ;; Declare operating system
 
@@ -72,6 +69,16 @@
           "emacs-exwm"
           "emacs-desktop-environment"
           "nss-certs"
+
+          ;; Utilities
+          
+          "trash-cli"
+          "htop"
+          "stow"
+          "unzip"
+
+          ;; Fonts
+          
           "font-adobe-source-code-pro"
           "font-adobe-source-han-sans"
           "font-adobe-source-sans-pro"
@@ -83,11 +90,9 @@
           "font-awesome"
           "font-bitstream-vera"
           "font-blackfoundry-inria"
-          "font-cantarell"
           "font-cns11643"
           "font-cns11643-swjz"
           "font-comic-neue"
-          "font-cronyx-cyrillic"
           "font-culmus"
           "font-dec-misc"
           "font-dejavu"
@@ -99,7 +104,6 @@
           "font-fira-sans"
           "font-fontna-yasashisa-antique"
           "font-gnu-freefont"
-          "font-gnu-freefont-ttf"
           "font-gnu-unifont"
           "font-go"
           "font-google-material-design-icons"
@@ -113,7 +117,6 @@
           "font-iosevka-aile"
           "font-iosevka-etoile"
           "font-iosevka-slab"
-          "font-iosevka-sparkle"
           "font-iosevka-term"
           "font-iosevka-term-slab"
           "font-ipa-mj-mincho"
@@ -131,13 +134,10 @@
           "font-mononoki"
           "font-mplus-testflight"
           "font-mutt-misc"
-          "font-open-dyslexic"
-          "font-opendyslexic"
           "font-public-sans"
           "font-rachana"
           "font-sarasa-gothic"
           "font-schumacher-misc"
-          "font-screen-cyrillic"
           "font-sil-andika"
           "font-sil-charis"
           "font-sil-gentium"
@@ -146,11 +146,9 @@
           "font-tamzen"
           "font-terminus"
           "font-tex-gyre"
-          "font-ubuntu"
           "font-un"
           "font-util"
           "font-vazir"
-          "font-winitzki-cyrillic"
           "font-wqy-microhei"
           "font-wqy-zenhei"
           "font-xfree86-type1"
@@ -162,8 +160,7 @@
           mcron-service-type
           (mcron-configuration
            (jobs
-            (list garbage-collector-job
-                  updatedb-job))))
+            (list garbage-collector-job))))
          (service docker-service-type)
          (service gnome-desktop-service-type)
          (service gnome-keyring-service-type)
