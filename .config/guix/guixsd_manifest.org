@@ -2,7 +2,7 @@
 
 #+title:GUIX SD Manifest
 #+author: Thomas Freeman
-#+date: Time-stamp: <2022-07-21 21:17:39 thomas>
+#+date: Time-stamp: <2022-07-24 08:52:15 thomas>
 #+description: This Org file contains manifest for my GUIX system
 #+language: en
 #+property: header-args :results silent :exports code
@@ -55,6 +55,7 @@
   "containerd"
   "docker"
   "docker-cli"
+  "docker-compose"
 #+end_src
 ** Email
 #+begin_src scheme :comments org

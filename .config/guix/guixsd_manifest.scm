@@ -22,6 +22,7 @@
 "containerd"
 "docker"
 "docker-cli"
+"docker-compose"
 
 ;; Email
 
