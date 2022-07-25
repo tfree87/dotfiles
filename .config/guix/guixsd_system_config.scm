@@ -165,6 +165,11 @@
          (service gnome-desktop-service-type)
          (service gnome-keyring-service-type)
          (service cups-service-type)
+         (service
+          openssh-service-type
+          (openssh-configuration
+           (x11-forwarding? #t)
+           (permit-root-login #f)))
          (set-xorg-configuration
           (xorg-configuration
            (keyboard-layout keyboard-layout))))
