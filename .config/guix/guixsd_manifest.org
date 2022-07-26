@@ -2,7 +2,7 @@
 
 #+title:GUIX SD Manifest
 #+author: Thomas Freeman
-#+date: Time-stamp: <2022-07-24 08:52:15 thomas>
+#+date: Time-stamp: <2022-07-25 20:14:23 thomas>
 #+description: This Org file contains manifest for my GUIX system
 #+language: en
 #+property: header-args :results silent :exports code
@@ -189,7 +189,6 @@
   "baobab"
   "clamav"
   "curl"
-  "dbxfs"
   "fd"
   "filezilla"
   "fish"

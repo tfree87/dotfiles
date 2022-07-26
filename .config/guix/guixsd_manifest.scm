@@ -156,7 +156,6 @@
 "baobab"
 "clamav"
 "curl"
-"dbxfs"
 "fd"
 "filezilla"
 "fish"
